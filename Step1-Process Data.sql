@@ -77,6 +77,7 @@ Tasks:
 
 4. Document the cleaning process:
 
+*/
 
 -- Exploration and data cleaning
 
