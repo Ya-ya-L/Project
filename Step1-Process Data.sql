@@ -163,6 +163,7 @@ WHERE
  OR TIMESTAMP_DIFF(ended_at, started_at, SECOND) < 0;
 
 -- Result:
+
 neg_time|
 --------+
      100|
@@ -187,6 +188,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`;
 
 -- Result:
+
 total_id|unique_id|
 --------+----------
  5667643| 5667643
@@ -207,7 +209,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-01-01' AND started_at < '2022-02-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -228,7 +230,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-02-01' AND started_at < '2022-03-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -249,7 +251,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-03-01' AND started_at < '2022-04-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -270,7 +272,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-04-01' AND started_at < '2022-05-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -291,7 +293,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-05-01' AND started_at < '2022-06-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -312,7 +314,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-06-01' AND started_at < '2022-07-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -333,7 +335,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-07-01' AND started_at < '2022-08-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -354,7 +356,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-08-01' AND started_at < '2022-09-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -375,7 +377,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-09-01' AND started_at < '2022-10-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -396,7 +398,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-10-01' AND started_at < '2022-11-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -417,7 +419,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-11-01' AND started_at < '2022-12-01';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -438,7 +440,7 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-12-01' AND started_at <= '2022-12-31';
 
--- Result
+-- Result:
 
 total_trip|max_duration|min_duration|     avg_duration     |
 ----------+------------+------------+-----------------------
@@ -583,7 +585,7 @@ SELECT
   MIN(ended_at-started_at) min_duration
 FROM `practice-gda-377022.cyclistic.2022`;
 
--- Result
+-- Result:
 
            avg_duration|   max_duration|min_duration|
 -----------------------+---------------+-------------
