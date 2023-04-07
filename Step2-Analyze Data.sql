@@ -8,16 +8,14 @@ SELECT
 FROM `practice-gda-377022.cyclistic.2022`
 GROUP BY member_casual;
 
-member_casual
-total_users
-1	
-member
-3345640
-2	
-casual
-2321977
+-- Result:
 
-  -- The total members are 3,345,652, and the total casual users are 2,321,991
+member_casual|total_users|
+-------------+------------
+       member|    3345640| 
+       casual|    2321977| 
+
+  -- The total members are 3,345,640, and the total casual users are 2,321,977
 
 --2. Observe the rideable_type preference of members and casual users.
 SELECT
