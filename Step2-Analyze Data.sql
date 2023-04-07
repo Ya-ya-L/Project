@@ -297,7 +297,8 @@ WHERE start_station_name IS NOT NULL
 GROUP BY
   start_station_name,
   member_casual
-ORDER BY num_ss DESC;
+ORDER BY num_ss DESC
+LIMIT 10;
 
 -- Result:
 
