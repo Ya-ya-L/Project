@@ -1,9 +1,10 @@
 -- Deliverables
 -- In order to answer the key business questions, you will follow the steps of the data analysis process: **ask, prepare, process, analyze, share, and act**.
 
-/* 
 
-Ask
+-- Ask
+
+/*
  
  Three questions will guide the future marketing program:
  1. How do annual members and casual riders use Cyclistic bikes differently?
@@ -11,11 +12,12 @@ Ask
  3. How can Cyclistic use digital media to influence casual riders to become members?
 
 
-Tasks
+Tasks:
 
  1. Identify the business task: The ultimate business goal is to increase the amount of casual riders.
     The business task is to analyze previous user data to understand the key preferences and differences between casual riders and members.
     Then, improve the future marketing strategies and programs based on the findings.
+    
  2. Consider key stakeholders:
  ● Lily Moreno:
    The director of marketing and your manager. 
@@ -29,23 +31,48 @@ Tasks
 
 */
 
-## Prepare
+
+-- Prepare
+
+/*
 
 Tasks:
-1. Download data and store it appropriately: I downloaded the data in CSV. for the whole year of 2022 to analyze the behavior of casual riders and members, and find insights for 2023 marketing strategy.
-2. Identify how it’s organized: The data is categorized by month, and the data structure is the same for each month.
+
+1. Download data and store it appropriately:
+    I downloaded the data in CSV. for the whole year of 2022 to analyze the behavior of casual riders and members,
+    and find insights for 2023 marketing strategy. 
+    I uploaded the data to BigQuery.
+    
+    The database name: `practice-gda-377022`
+    The dataset name: `cyclistic`
+    Table names: 202201, 202202, 202203 ... 202212, a total of 12 tables.
+    
+2. Identify how it’s organized:
+    The data is categorized by month, and the data structure is the same for each month.
+    
 3. Sort and filter the data: I imported the 12 CSV files in Excel and sorted them ascendingly to find if there was any NULL value.
+
 4. Determine the credibility of the data: The data is creditable because it is from the company's database (according to the scenario.)
 
-## Process
+*/
 
-Tasks
+
+-- Process
+
+/*
+
+Tasks:
+
 1. Check the data for errors.
+
 2. Choose your tools: I will use Excel and SQL(BigQuery) to clean data and then use SQL(BigQuery) to analyze.
+
 3. Transform the data so you can work with it effectively.
+
 4. Document the cleaning process:
 
 -- Exploration and data cleaning
+
 SELECT
  column_name,
  COUNT(table_name) num_table
@@ -53,7 +80,30 @@ FROM
  `practice-gda-377022.cyclistic.INFORMATION_SCHEMA.COLUMNS`
 GROUP BY
  1;
- -- Now I know the column names are consistent among the 14 tables.
+ 
+ -- Result:
+
+    column_name   |num_table|
+------------------+---------+
+ride_id           |       12| 
+rideable_type     |       12|
+started_at        |       12|
+ended_at          |       12|
+start_station_name|       12|
+end_station_name  |       12|
+start_station_id  |       12|
+end_station_id    |       12|
+start_station_name|       12|
+end_station_name  |       12|
+start_lat         |       12|
+start_lng         |       12|
+end_lat           |       12|
+end_lng           |       12|
+member_casual     |       12|
+   
+ -- Now I know the column names are consistent among the 12 tables.
+ 
+ 
 
 -- Combine the 12 table together for further analysis
 SELECT *
@@ -91,28 +141,48 @@ FROM `practice-gda-377022.cyclistic.202211`
 UNION ALL
 SELECT *
 FROM `practice-gda-377022.cyclistic.202212`;
+
 -- Saved as '2022'.
 
+
+
 -- Check and delete negative time
+
 SELECT
-  ride_id,
-  ended_at,
-  started_at
+  COUNT(ride_id) neg_time
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE TIMESTAMP_DIFF(ended_at, started_at, MINUTE) < 0;
+
+-- Result:
+neg_time|
+--------+
+      74|
+
 -- There are 74 rows that have negative time, which means the ended time was earlier than the started time.
 
 DELETE FROM `practice-gda-377022.cyclistic.2022`
 WHERE TIMESTAMP_DIFF(ended_at, started_at, MINUTE) < 0;
--- Delete the negative time rows
+-- Delete the negative time rows.
+
+
 
 -- Explore the data: total (unique) number of ride_id, mean, maximum, and minimum.
-SELECT COUNT(ride_id) AS total_id
+
+SELECT
+  COUNT(ride_id) total_id,
+  COUNT(DISTINCT ride_id) unique_id
 FROM `practice-gda-377022.cyclistic.2022`;
 
-SELECT DISTINCT(COUNT(ride_id)) AS total_id
-FROM `practice-gda-377022.cyclistic.2022`;
+-- Result:
+total_id|unique_id|
+--------+----------
+ 5667643| 5667643
+
 -- The total number of ride_id is 5,667,643, and they are all unique, so there's no need for deleting duplicate rows.
+
+
+
+-- Explore statistics for each month
 
 --January 2022
 SELECT
@@ -122,8 +192,17 @@ SELECT
   SUM(ended_at-started_at)/COUNT(*) avg_duration
 FROM `practice-gda-377022.cyclistic.2022`
 WHERE started_at >= '2022-01-01' AND started_at < '2022-02-01';
+
+--Result
+
+total_trip|max_duration|min_duration|     avg_duration     |
+----------+------------+------------+-----------------------
+    103770|         487|           0|0-0 0 0:15:15.879840030 
+
+
 -- The total trip in January 2022 was 103,770, the most duration was 487 hours, the least duration was 0,
 -- and the average duration was around 00:15:15.
+
 
 --February 2022
 SELECT
