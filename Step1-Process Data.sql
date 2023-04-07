@@ -2,7 +2,7 @@
 
 Deliverables
 
-In order to answer the key business questions, you will follow the steps of the data analysis process:
+In order to answer the key business questions, I will follow the steps of the data analysis process:
 **ask, prepare, process, analyze, share, and act**.
 
 */
