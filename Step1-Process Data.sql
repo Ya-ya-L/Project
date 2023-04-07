@@ -602,8 +602,7 @@ SELECT
   FORMAT_DATE('%B', DATE(started_at)) AS month,
   FORMAT_DATE('%A', DATE(started_at)) AS weekday,
   FORMAT_TIME('%k', TIME(started_at)) AS start_hour,
-  TIMESTAMP_DIFF(ended_at, started_at, MINUTE) AS duration_minute,
-  member_casual
+  TIMESTAMP_DIFF(ended_at, started_at, MINUTE) AS duration_minute
 FROM `practice-gda-377022.cyclistic.2022`
 ORDER BY day, ride_id;
 
