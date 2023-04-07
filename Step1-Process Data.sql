@@ -2,7 +2,7 @@
 -- In order to answer the key business questions, you will follow the steps of the data analysis process: **ask, prepare, process, analyze, share, and act**.
 
 
--- Ask
+-- **Ask**
 
 /*
  
@@ -32,7 +32,7 @@ Tasks:
 */
 
 
--- Prepare
+-- **Prepare**
 
 /*
 
@@ -57,7 +57,7 @@ Tasks:
 */
 
 
--- Process
+-- **Process**
 
 /*
 
@@ -184,7 +184,7 @@ total_id|unique_id|
 
 -- Explore statistics for each month
 
---January 2022
+-- January 2022
 SELECT
   COUNT(*) total_trip,
   MAX(TIMESTAMP_DIFF(ended_at, started_at, HOUR)) max_duration,
@@ -204,7 +204,8 @@ total_trip|max_duration|min_duration|     avg_duration     |
 -- and the average duration was around 00:15:15.
 
 
---February 2022
+-- February 2022
+
 SELECT
   COUNT(*) total_trip,
   MAX(TIMESTAMP_DIFF(ended_at, started_at, HOUR)) max_duration,
