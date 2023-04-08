@@ -12,8 +12,8 @@ GROUP BY member_casual;
 
 member_casual|total_users|
 -------------+------------
-       member|    3345640| 
-       casual|    2321977| 
+member       |3345640    | 
+casual       |2321977    | 
 
   -- The total members are 3,345,640, and the total casual users are 2,321,977
 
@@ -35,11 +35,11 @@ ORDER BY num_ride DESC;
 
 member_casual|rideable_type|num_ride|
 -------------+-------------+---------
-       member| classic_bike| 1709743|
-       member|electric_bike| 1635897|
-       casual|electric_bike| 1253060|
-       casual| classic_bike|  891443|
-       casual|  docked_bike|  177474|
+member       |classic_bike |1709743 |
+member       |electric_bike|1635897 |
+casual       |electric_bike|1253060 |
+casual       |classic_bike |891443  |
+casual       |docked_bike  |177474  |
 
 
 -- I observe that members like classic bike (1,709,743) more than electric bike (1,635,897) and they've never used docked bike.
