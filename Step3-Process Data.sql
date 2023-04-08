@@ -116,7 +116,7 @@ WHERE TIMESTAMP_DIFF(ended_at, started_at, SECOND) < 0;
 
 
 
--- Explore the data: total (unique) number of ride_id, mean, maximum, and minimum.
+-- Explore the data: the total and unique number of ride_id, and the mean, maximum, and minimum time duration for 2022.
 
 SELECT
   COUNT(ride_id) total_id,
@@ -127,9 +127,22 @@ FROM `practice-gda-377022.cyclistic.2022`;
 
 total_id|unique_id|
 --------+----------
- 5667643| 5667643
+5667643 |5667643
 
 -- The total number of ride_id is 5,667,643, and they are all unique, so there's no need for deleting duplicate rows.
+
+-- Mean, max, min time duration for 2022 whole year.
+SELECT
+  SUM(ended_at-started_at)/COUNT(*) avg_duration,
+  MAX(ended_at-started_at) max_duration,
+  MIN(ended_at-started_at) min_duration
+FROM `practice-gda-377022.cyclistic.2022`;
+
+-- Result:
+
+avg_duration           |max_duration   |min_duration|
+-----------------------+---------------+-------------
+0-0 0 0:19:26.757015867|0-0 0 689:47:15| 0-0 0 0:0:0|
 
 
 
@@ -147,9 +160,9 @@ WHERE started_at >= '2022-01-01' AND started_at < '2022-02-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    103770|         487|           0|0-0 0 0:15:15.879840030 
+103770    |487         |0           |0-0 0 0:15:15.879840030 
 
 
 -- The total trip in January 2022 was 103,770, the most duration was 487 hours, the least duration was 0,
@@ -168,9 +181,9 @@ WHERE started_at >= '2022-02-01' AND started_at < '2022-03-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    115609|         181|           0|0-0 0 0:14:14.419232066 
+115609    |181         |0           |0-0 0 0:14:14.419232066 
 
 
 -- The total trip in February 2022 was 115,609, the most duration was 181 hours, the least duration was 0,
@@ -189,9 +202,9 @@ WHERE started_at >= '2022-03-01' AND started_at < '2022-04-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    284041|         572|           0|0-0 0 0:18:29.839938600 
+284041    |572         |0           |0-0 0 0:18:29.839938600 
 
 
 -- The total trip in March 2022 was 284,041, the most duration was 572 hours, the least duration was 0,
@@ -210,9 +223,9 @@ WHERE started_at >= '2022-04-01' AND started_at < '2022-05-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    371249|         352|           0|0-0 0 0:17:38.121495276 
+371249    |352         |0           |0-0 0 0:17:38.121495276 
 
 
 -- The total trip in April 2022 was 371,249, the most duration was 352 hours, the least duration was 0,
@@ -231,9 +244,9 @@ WHERE started_at >= '2022-05-01' AND started_at < '2022-06-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    634858|         604|           0| 0-0 0 0:21:5.860449108 
+634858    |604         |0           | 0-0 0 0:21:5.860449108 
 
 
 -- The total trip in May 2022 was 634,858, the most duration was 604 hours, the least duration was 0,
@@ -252,9 +265,9 @@ WHERE started_at >= '2022-06-01' AND started_at < '2022-07-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    769193|         597|           0|0-0 0 0:22:41.006738230 
+769193    |597         |0           |0-0 0 0:22:41.006738230 
 
 
 -- The total trip in June 2022 was 769,193, the most duration was 597 hours, the least duration was 0,
@@ -273,9 +286,9 @@ WHERE started_at >= '2022-07-01' AND started_at < '2022-08-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    823475|         570|           0|0-0 0 0:21:23.468867907 
+823475    |570         |0           |0-0 0 0:21:23.468867907 
 
 
 -- The total trip in July 2022 was 823,475, the most duration was 570 hours, the least duration was 0,
@@ -294,9 +307,9 @@ WHERE started_at >= '2022-08-01' AND started_at < '2022-09-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    785925|         468|           0|0-0 0 0:20:39.450077297 
+785925    |468         |0           |0-0 0 0:20:39.450077297 
 
 
 -- The total trip in August 2022 was 785,925, the most duration was 468 hours, the least duration was 0,
@@ -315,9 +328,9 @@ WHERE started_at >= '2022-09-01' AND started_at < '2022-10-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    701336|         461|           0|0-0 0 0:19:19.527952365 
+701336    |461         |0           |0-0 0 0:19:19.527952365 
 
 
 -- The total trip in September 2022 was 701,336, the most duration was 461 hours, the least duration was 0,
@@ -336,9 +349,9 @@ WHERE started_at >= '2022-10-01' AND started_at < '2022-11-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    558684|         689|           0|0-0 0 0:17:21.365995804
+558684    |689         |0           |0-0 0 0:17:21.365995804
 
 
 -- The total trip in October 2022 was 558,684, the most duration was 689 hours, the least duration was 0,
@@ -357,9 +370,9 @@ WHERE started_at >= '2022-11-01' AND started_at < '2022-12-01';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    337697|         326|           0| 0-0 0 0:14:9.928323319
+337697    |326         |0           | 0-0 0 0:14:9.928323319
 
 
 -- The total trip in November 2022 was 337,697, the most duration was 326 hours, the least duration was 0,
@@ -378,9 +391,9 @@ WHERE started_at >= '2022-12-01' AND started_at <= '2022-12-31';
 
 -- Result:
 
-total_trip|max_duration|min_duration|     avg_duration     |
+total_trip|max_duration|min_duration|avg_duration          |
 ----------+------------+------------+-----------------------
-    176753|         319|           0|0-0 0 0:13:25.287072920
+176753    |319         |0           |0-0 0 0:13:25.287072920
 
 
 -- The total trip in December 2022 was 176,753, the most duration was 319 hours, the least duration was 0,
@@ -511,21 +524,6 @@ GROUP BY month
 ORDER BY month;
 
 -- Saved as '2022statistics'
-
-
-
--- Mean, max, min duration for 2022 whole year
-SELECT
-  SUM(ended_at-started_at)/COUNT(*) avg_duration,
-  MAX(ended_at-started_at) max_duration,
-  MIN(ended_at-started_at) min_duration
-FROM `practice-gda-377022.cyclistic.2022`;
-
--- Result:
-
-           avg_duration|   max_duration|min_duration|
------------------------+---------------+-------------
-0-0 0 0:19:26.757015867|0-0 0 689:47:15| 0-0 0 0:0:0|
 
 
 
