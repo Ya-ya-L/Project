@@ -25,9 +25,9 @@ In 2016, Cyclistic launched a successful bike-share offering. Since then, the pr
 Moreno has set a clear goal: Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
 ## Deliverables
-In order to answer the key business questions, you will follow the steps of the data analysis process: **ask, prepare, process, analyze, share, and act**.
+In order to answer the key business questions, I will follow the steps of the data analysis process: **ask, prepare, process, analyze, share, and act**.
 
-You will produce a report with the following deliverables:
+I will produce a report with the following deliverables:
 
 1. A clear statement of the business task
 2. A description of all data sources used
