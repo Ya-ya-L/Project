@@ -18,7 +18,7 @@ Three questions will guide the future marketing program:
  3. How can Cyclistic use digital media to influence casual riders to become members?
  
 ### Tasks:
- 1. Identify the business task: The ultimate business goal is to increase the amount of casual riders.
+ 1. Identify the business task: The ultimate business goal is to increase the number of members transferred from casual riders.
     The business task is to analyze previous user data to understand the key preferences and differences between casual riders and members.
     Then, improve the future marketing strategies and programs based on the findings.
     
