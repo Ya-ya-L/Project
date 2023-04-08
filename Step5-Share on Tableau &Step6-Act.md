@@ -18,7 +18,7 @@ Please kindly find other visualizations on [my Tableau profile](https://public.t
 Conduct top 3 recommendations to the Cyclistic marketing analytics team for increasing sales and transforming casual riders to members .
 
 ### 1. Increase ads and budget from May to October.
-Based on the analysis, either members or casual riders preferred riding from May to October. The marketing team can seize the chance to increase ad and brand exposure to casual riders.
+Based on the analysis, either members or casual riders preferred riding from May to October. The marketing team can seize the chance to increase ads and brand exposure to casual riders.
 
 ### 2. Increase electric bikes
 Casual riders preferred electric bikes than any other bikes. Also, although members rided more classic bikes (1,709,743), they rided the similar amount of electric bikes (1,635,897). Investing in electric bikes may increase the casual riders and trigger them to buy annual memberships with our marketing campaigns.
