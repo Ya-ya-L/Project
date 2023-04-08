@@ -8,7 +8,7 @@ I will produce a report with the following deliverables:
 3. Documentation of any cleaning or manipulation of data
 4. A summary of my analysis
 5. Supporting visualizations and key findings
-6. Top three recommendations based on your analysis
+6. Top three recommendations based on my analysis
 
 ## Ask
 
