@@ -514,7 +514,7 @@ ORDER BY month;
 
 
 
--- Mean duration each ride_id
+-- Mean, max, min duration for 2022 whole year
 SELECT
   SUM(ended_at-started_at)/COUNT(*) avg_duration,
   MAX(ended_at-started_at) max_duration,
