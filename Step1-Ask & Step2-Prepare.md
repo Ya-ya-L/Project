@@ -41,7 +41,7 @@ Three questions will guide the future marketing program:
     
     The database name: `practice-gda-377022`
     The dataset name: `cyclistic`
-    Table names: 202201, 202202, 202203 ... 202212, a total of 12 tables.
+    Table names: `202201`, `202202`, `202203` ... `202212`, a total of 12 tables.
     
 2. Identify how it’s organized:
     The data is categorized by month, and the data structure is the same for each month.
