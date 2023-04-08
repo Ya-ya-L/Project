@@ -26,7 +26,7 @@ GROUP BY
  
  -- Result:
 
-    column_name   |num_table|
+column_name       |num_table|
 ------------------+---------+
 ride_id           |       12| 
 rideable_type     |       12|
@@ -102,7 +102,7 @@ WHERE
 
 neg_time|
 --------+
-     100|
+100     |
 
 -- There are 100 rows that have negative time, which means the ended time was earlier than the started time.
 
