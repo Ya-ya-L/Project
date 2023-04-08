@@ -1,4 +1,4 @@
--- Analyze: The different usage for casual and member users.
+-- Analyze: The different preferences and activities for casual and member users.
 
 -- 1. Calculate the total members and casual users.
 
