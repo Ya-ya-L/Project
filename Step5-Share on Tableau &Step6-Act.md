@@ -18,7 +18,7 @@ Please kindly find other visualizations on [my Tableau profile](https://public.t
 Conduct top 3 recommendations to the Cyclistic marketing analytics team for increasing sales and transforming casual riders to members .
 
 ### 1. Increase bikes at popular stations
-Based on the analysis, Streeter Dr & Grand Ave was the most popular start station for riders. Cyclistic could provide more bikes for riders and put an ad at the station to promote the annual membership program.
+Based on the analysis, Streeter Dr & Grand Ave, DuSable Lake Shore Dr & Monroe St, and DuSable Lake Shore Dr & North Blvd were the most popular start stations for riders. Cyclistic could provide more bikes for riders and put an ad at the stations to promote the annual membership program.
 
 ### 2. Increase electric bikes
 Casual riders preferred electric bikes than any other bikes. Also, although members rided more classic bikes (1,709,743), they rided the similar amount of electric bikes (1,635,897). Investing in electric bikes may increase the casual riders and trigger them to buy annual memberships with our marketing campaigns.
