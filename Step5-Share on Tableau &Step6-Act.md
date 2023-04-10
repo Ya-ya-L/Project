@@ -17,11 +17,11 @@ Please kindly find other visualizations on [my Tableau profile](https://public.t
 ## Tasks: 
 Conduct top 3 recommendations to the Cyclistic marketing analytics team for increasing sales and transforming casual riders to members .
 
-### 1. Increase ads and budget from May to October.
-Based on the analysis, either members or casual riders preferred riding from May to October. The marketing team can seize the chance to increase ads and brand exposure to casual riders.
+### 1. Offer discounts on weekends and in the summer
+Based on the time preference analysis, casual riders used our services mostly on weekends. We can offer exclusive weekend discounts for members in order to trigger casual riders to buy annual membership. Also, summer (June to August) was the most popular time for all riders. Investing in more ads during the summer time could increase brand awareness, and attract casual riders to but membership by offering summer discounts. We can also design a new membership that is only for three months so that casual riders who are not interested in annual membership can have another choice.
 
 ### 2. Increase electric bikes
 Casual riders preferred electric bikes than any other bikes. Also, although members rided more classic bikes (1,709,743), they rided the similar amount of electric bikes (1,635,897). Investing in electric bikes may increase the casual riders and trigger them to buy annual memberships with our marketing campaigns.
 
-### 3. Offer discounts on weekends and in the summer
-Based on the time preference analysis, casual riders used our services mostly on weekends. We can offer exclusive weekend discounts for members in order to trigger casual riders to buy annual membership. Also, summer (June to August) was the most popular time for all riders. We can also design a new membership that is only for three months so that casual riders who are not interested in annual membership can have another choice.
+### 3. Increase bikes at popular stations
+Based on the analysis, Streeter Dr & Grand Ave was the most popular start station for riders. Cyclistic could provide more bikes for riders and put an ad at the station to promote the annual membership program.
